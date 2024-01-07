@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "746456081490",
+    "project_id": "pruebamercadolibre-9031b",
+    "storage_bucket": "pruebamercadolibre-9031b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:746456081490:android:fcb416f1763f1666c9eb8b",
+        "android_client_info": {
+          "package_name": "com.example.pruebamercadolibre"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkFb_xVingejEARqxoQd0d4Mni0clEQzo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
