@@ -4,11 +4,11 @@
 
 La app debería contar con tres pantallas:
 1. Campo de búsqueda.
-   ![WhatsApp Image 2024-01-12 at 6 14 18 PM](https://github.com/sergioa63/PruebaMercadoLibre/assets/15257141/3875995b-ab70-4dd8-a481-5d4b43b04edf)
+   ![WhatsApp Image 2024-01-12 at 6 14 18 PM | width=100](https://github.com/sergioa63/PruebaMercadoLibre/assets/15257141/3875995b-ab70-4dd8-a481-5d4b43b04edf)
 3. Visualización de resultados de la búsqueda.
-   ![WhatsApp Image 2024-01-12 at 6 14 18 PM (1)](https://github.com/sergioa63/PruebaMercadoLibre/assets/15257141/50f26909-b22a-42d4-9def-310fccfb3ea4)
+   ![WhatsApp Image 2024-01-12 at 6 14 18 PM (1) | width=100](https://github.com/sergioa63/PruebaMercadoLibre/assets/15257141/50f26909-b22a-42d4-9def-310fccfb3ea4)
 5. Detalle de un producto.
-   ![WhatsApp Image 2024-01-12 at 6 14 18 PM (2)](https://github.com/sergioa63/PruebaMercadoLibre/assets/15257141/7ad0e370-7629-49c8-9c41-f70c1851a2cf)
+   ![WhatsApp Image 2024-01-12 at 6 14 18 PM (2)| width=100] (https://github.com/sergioa63/PruebaMercadoLibre/assets/15257141/7ad0e370-7629-49c8-9c41-f70c1851a2cf)
 
 ## Resultado
 
