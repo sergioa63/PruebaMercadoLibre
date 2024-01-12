@@ -1,6 +1,5 @@
 package com.example.mylibrary.mainlist
 
-import android.os.Debug
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.core.model.data.local.Results
@@ -56,7 +55,6 @@ MainViewModel
                     .flowOn(ioDispatcher)
                     .catch { e ->
                         _visibleLoading.value = false
-                        "exception to search product-${e.localizedMessage}"
                     }
                     .collect {
                         _itemsList.value =
@@ -90,7 +88,6 @@ MainViewModel
                     .flowOn(Dispatchers.IO)
                     .catch { e ->
                         _visibleLoading.value = false
-                        Debug.startMethodTracing("exception to detail product-${e.localizedMessage}")
                     }
                     .collect {
                         it.plain_text.let {
