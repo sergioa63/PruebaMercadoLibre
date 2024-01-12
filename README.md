@@ -11,8 +11,8 @@ La app debería contar con tres pantallas:
 
 * App que compila desde api 24 a 33.
 * Lenguaje Kotlin
-* Construccion de pantalaas con compose
-* Puede Rotarce la pantalla manteniendo estado
+* Construccion de pantallas con compose
+* Puede rotarce la pantalla manteniendo estado
 * Puede cambiar a modo oscuro el app
 * Patron MVVM con catalog version
 * Inyeccion dependencias Dagger Hilt
