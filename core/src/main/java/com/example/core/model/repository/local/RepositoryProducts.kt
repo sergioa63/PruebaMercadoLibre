@@ -1,4 +1,4 @@
-package com.example.core.model.repository.remoto
+package com.example.core.model.repository.local
 
 import com.example.core.database.dao.ProductosDao
 import com.example.core.model.data.local.Results
@@ -9,17 +9,9 @@ import kotlinx.coroutines.withContext
 class RepositoryProducts(
     private val productosDao: ProductosDao,
     private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO,
-) {
-    suspend fun insertProduct(results: Results) =
+) : IReposirotyDetailLocal {
+    override suspend fun insertProduct(results: Results) =
         withContext(ioDispatcher) {
-            /*
-            val results =
-                Results(
-                    id = myItemCustom.id,
-                    thumbnail = myItemCustom.thumb,
-                    title = myItemCustom.title,
-                )
-             */
             if (productosDao.getProducto(results.id) == null) {
                 productosDao.insertProductos(results)
             } else {
@@ -27,7 +19,7 @@ class RepositoryProducts(
             }
         }
 
-    suspend fun getProduct(id: String) =
+    override suspend fun getProduct(id: String) =
         withContext(ioDispatcher) {
             productosDao.getProducto(id)
         }

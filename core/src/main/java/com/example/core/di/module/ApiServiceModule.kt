@@ -1,8 +1,10 @@
 package com.example.core.di.module
 
 import com.example.core.database.dao.DescriptProduct
-import com.example.core.model.repository.local.RepositoryDescriptionProduct
-import com.example.core.model.repository.remoto.RespositorySearchProduct
+import com.example.core.model.repository.remoto.IRepositoryDetailRemote
+import com.example.core.model.repository.remoto.IRepositoryListRemote
+import com.example.core.model.repository.remoto.RepositoryDescriptionProductImpl
+import com.example.core.model.repository.remoto.RespositorySearchProductImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -54,9 +56,11 @@ object ApiServiceModule {
 
     @Singleton
     @Provides
-    fun providesRepositoryDescriptionProduct(descriptProduct: DescriptProduct) = RepositoryDescriptionProduct(descriptProduct)
+    fun providesRepositoryDescriptionProductImpl(descriptProduct: DescriptProduct): IRepositoryDetailRemote =
+        RepositoryDescriptionProductImpl(descriptProduct)
 
     @Singleton
     @Provides
-    fun providesRespositorySearchProduct(productosList: ProductosList) = RespositorySearchProduct(productosList)
+    fun providesRespositorySearchProductImpl(productosList: ProductosList): IRepositoryListRemote =
+        RespositorySearchProductImpl(productosList)
 }

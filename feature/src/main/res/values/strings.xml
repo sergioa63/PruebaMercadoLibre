@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Mi prueba</string>
+    <string name="menu_back">Back</string>
+    <string name="menu_search">Buscar productos</string>
+    <string name="detail">Detalle</string>
+    <string name="image_shopping_add">image shopping add</string>
+    <string name="agregado_a_la_lista">Agregado a la lista</string>
+    <string name="image_item">item image</string>
+    <string name="item_add_list">Item agregado a la lista</string>
+    <string name="label_crossfade_top_appbase">Crossfade top AppBase</string>
+    <string name="to_bar_search_icon">search icon</string>
+</resources>

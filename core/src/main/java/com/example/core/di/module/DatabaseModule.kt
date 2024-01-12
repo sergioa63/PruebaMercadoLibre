@@ -4,7 +4,8 @@ import android.content.Context
 import androidx.room.Room
 import com.example.core.database.AppDatabase
 import com.example.core.database.dao.ProductosDao
-import com.example.core.model.repository.remoto.RepositoryProducts
+import com.example.core.model.repository.local.IReposirotyDetailLocal
+import com.example.core.model.repository.local.RepositoryProducts
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -38,5 +39,5 @@ class DatabaseModule {
 
     @Singleton
     @Provides
-    fun providesRepositoryProducts(productosDao: ProductosDao) = RepositoryProducts(productosDao)
+    fun providesRepositoryProducts(productosDao: ProductosDao): IReposirotyDetailLocal = RepositoryProducts(productosDao)
 }
