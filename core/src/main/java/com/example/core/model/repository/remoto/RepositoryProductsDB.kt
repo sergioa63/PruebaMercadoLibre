@@ -1,7 +1,7 @@
-package com.example.core.model.repository
+package com.example.core.model.repository.remoto
 
 import com.example.core.database.dao.ProductosDao
-import com.example.mymovies.dto.responceproductos.Results
+import com.example.core.model.data.local.Results
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

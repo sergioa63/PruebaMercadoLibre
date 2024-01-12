@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.Room
 import com.example.core.database.AppDatabase
 import com.example.core.database.dao.ProductosDao
-import com.example.core.model.repository.RepositoryProductsDB
+import com.example.core.model.repository.remoto.RepositoryProductsDB
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

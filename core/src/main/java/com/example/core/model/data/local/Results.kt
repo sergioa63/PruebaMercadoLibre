@@ -1,4 +1,4 @@
-package com.example.mymovies.dto.responceproductos
+package com.example.core.model.data.local
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

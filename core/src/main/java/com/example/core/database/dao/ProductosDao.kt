@@ -6,7 +6,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
-import com.example.mymovies.dto.responceproductos.Results
+import com.example.core.model.data.local.Results
 
 @Dao
 interface ProductosDao {

@@ -56,4 +56,10 @@ dependencies {
     implementation(libs.jakewharton.serialization)
     implementation(libs.android.hilt.android)
     kapt(libs.android.hilt.compiler)
+    implementation(libs.squareup.khttp3)
+    implementation(libs.squareup.khttp3.interceptor)
+    implementation(libs.squareup.khttp3.urlconnection)
+    implementation(libs.retrofit2)
+    implementation(libs.retrofit2.converter.gson)
+    implementation(libs.retrofit2.converter.scalars)
 }
