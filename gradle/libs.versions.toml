@@ -25,6 +25,8 @@ junitEspresso = '3.5.1'
 coil = "2.5.0"
 hiltNavigatio = "1.0.0"
 nav = "2.5.3"
+appcompat = "1.6.1"
+material = "1.11.0"
 
 [libraries]
 androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
@@ -74,6 +76,8 @@ androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "u
 androidx-compose-ui-test = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
@@ -84,6 +88,7 @@ android-hilt = { id = "com.google.dagger.hilt.android", version.ref = "androidHi
 google-services = { id = "com.google.gms.google-services", version.ref = "googleservices" }
 google-firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebasecrashlytics" }
 jlleitschuh-ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
+com-android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 
 
 
