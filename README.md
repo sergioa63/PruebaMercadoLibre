@@ -26,6 +26,7 @@ La app debería contar con tres pantallas:
 * Errores criticos o inesperados monitoriados por firebase crashlytics
 * firebase analytics
 * Test Unitarios para viewmodel y repositories
+* Validaciòn de conexion
 
 Aplicación para búsqueda de productos, búsqueda de de productos entrega un listado, seleccion de producto que apertura de detalle del producto y agregar producto a listado.
 
