@@ -40,6 +40,7 @@ dependencies {
     implementation(libs.androidx.ktx)
     implementation(libs.appcompat)
     implementation(libs.material)
+    implementation(libs.play.services.measurement.api)
     testImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.junit.test)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -62,4 +63,7 @@ dependencies {
     implementation(libs.retrofit2)
     implementation(libs.retrofit2.converter.gson)
     implementation(libs.retrofit2.converter.scalars)
+    testImplementation(libs.io.mockk)
+    androidTestImplementation(libs.io.mockk.android)
+    testImplementation(libs.coroutines.test)
 }

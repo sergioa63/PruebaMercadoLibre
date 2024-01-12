@@ -28,6 +28,8 @@ nav = "2.5.3"
 appcompat = "1.6.1"
 material = "1.11.0"
 firebasebom = "32.7.0"
+mockk = "1.13.9"
+coroutines_version = '1.7.3'
 
 [libraries]
 androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
@@ -70,6 +72,9 @@ androidx-coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "co
 
 androidx-hilt-navigation = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigatio" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "nav" }
+io-mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
+io-mockk-android = { group = "io.mockk", name = "mockk-android", version.ref = "mockk" }
+coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines_version" }
 
 androidx-compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
@@ -82,6 +87,7 @@ material = { group = "com.google.android.material", name = "material", version.r
 firebasebom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebasebom" }
 firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics" }
 firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics-ktx" }
+play-services-measurement-api = { group = "com.google.android.gms", name = "play-services-measurement-api", version = "21.5.0" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }

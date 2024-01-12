@@ -67,6 +67,9 @@ dependencies {
     implementation(libs.androidx.lifecycle)
     implementation(libs.androidx.hilt.navigation)
     implementation(libs.androidx.navigation.compose)
+    testImplementation(libs.io.mockk)
+    androidTestImplementation(libs.io.mockk.android)
+    testImplementation(libs.coroutines.test)
 }
 
 kapt {
