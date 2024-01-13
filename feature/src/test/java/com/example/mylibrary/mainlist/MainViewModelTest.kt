@@ -30,6 +30,7 @@ class MainViewModelTest {
 
     companion object {
         private const val QUERY = "query"
+        private const val CODE = "code"
     }
 
     @Before
@@ -80,6 +81,24 @@ class MainViewModelTest {
             advanceUntilIdle()
             // THEN
             coVerify { repositoryListRemoteMockk.getProducts(QUERY) }
+        }
+
+    @OptIn(ExperimentalCoroutinesApi::class)
+    @Test
+    fun whengetDetailProductInvoke_RepositoryDescription() =
+        runTest {
+            // GIVEN
+            val responceDetailProduct = ResponceProductos()
+            coEvery {
+                repositoryDescriptionProductMockk.getDetail(CODE)
+            } returns flow { responceDetailProduct }
+            // WHEN
+            mainViewModel.getDetailProduct(CODE)
+            advanceUntilIdle()
+            // THEN
+            coVerify {
+                repositoryDescriptionProductMockk.getDetail(CODE)
+            }
         }
 
     @After
