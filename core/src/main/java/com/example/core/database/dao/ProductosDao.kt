@@ -14,7 +14,7 @@ interface ProductosDao {
     fun getAllProductos(): List<Results>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertAllProductos(order: List<Results?>?)
+    fun insertAllProductos(order: List<Results>)
 
     @Query("SELECT * FROM Results WHERE id = :id")
     fun getProducto(id: String): Results
