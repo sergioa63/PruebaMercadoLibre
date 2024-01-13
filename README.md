@@ -30,7 +30,7 @@ La app debería contar con tres pantallas:
 
 Aplicación para búsqueda de productos, búsqueda de de productos entrega un listado, seleccion de producto que apertura de detalle del producto y agregar producto a listado.
 
-### Apk en raíz del repositorio
+### Apk en raíz del repositorio (app_prueba.apk)
 
 https://github.com/sergioa63/PruebaMercadoLibre/assets/15257141/b123ef80-4244-452b-8ad0-e5c29c863fac
 
