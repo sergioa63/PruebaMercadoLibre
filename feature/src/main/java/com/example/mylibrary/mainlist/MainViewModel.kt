@@ -6,9 +6,8 @@ import com.example.core.model.data.local.Results
 import com.example.core.model.repository.local.IReposirotyDetailLocal
 import com.example.core.model.repository.remoto.IRepositoryDetailRemote
 import com.example.core.model.repository.remoto.IRepositoryListRemote
-import com.example.core.network.Util.Companion.NEW_VALUE
-import com.example.core.network.Util.Companion.OLD_VALUE
-import com.example.core.network.Util.Companion.PATTERN
+import com.example.core.network.clearThousandFormat
+import com.example.core.network.formatThousand
 import com.example.mylibrary.model.MyItemCustom
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineDispatcher
@@ -18,7 +17,6 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.launch
-import java.text.DecimalFormat
 import javax.inject.Inject
 
 @HiltViewModel
@@ -70,15 +68,6 @@ MainViewModel
                         _visibleLoading.value = false
                     }
             }
-        }
-
-        fun Double.formatThousand(): String {
-            val decimalFormatter = DecimalFormat(PATTERN)
-            return decimalFormatter.format(this)
-        }
-
-        fun String.clearThousandFormat(): String {
-            return this.replace(OLD_VALUE, NEW_VALUE)
         }
 
         fun getDetailProduct(code: String) {

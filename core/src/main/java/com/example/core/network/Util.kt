@@ -8,6 +8,7 @@ import android.net.NetworkRequest
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.callbackFlow
+import java.text.DecimalFormat
 
 class Util {
     companion object {
@@ -69,4 +70,13 @@ fun NetworkCallback(callback: (ConnectionState) -> Unit): ConnectivityManager.Ne
             callback(ConnectionState.Unavailable)
         }
     }
+}
+
+fun Double.formatThousand(): String {
+    val decimalFormatter = DecimalFormat(Util.PATTERN)
+    return decimalFormatter.format(this)
+}
+
+fun String.clearThousandFormat(): String {
+    return this.replace(Util.OLD_VALUE, Util.NEW_VALUE)
 }
