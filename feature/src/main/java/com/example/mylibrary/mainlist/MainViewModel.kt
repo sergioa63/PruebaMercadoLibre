@@ -40,9 +40,9 @@ MainViewModel
 
         fun getItemSelect(id: String): MyItemCustom {
             _item.value =
-                _itemsList.value.first {
+                _itemsList.value.firstOrNull {
                     it.id == id
-                }
+                } ?: item.value
             return _item.value
         }
 

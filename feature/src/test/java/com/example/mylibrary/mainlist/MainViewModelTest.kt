@@ -11,6 +11,7 @@ import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.mockk
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.test.advanceUntilIdle
 import kotlinx.coroutines.test.runTest
@@ -100,6 +101,32 @@ class MainViewModelTest {
                 repositoryDescriptionProductMockk.getDetail(CODE)
             }
         }
+
+    @Test
+    fun getItemSelectRetunValueItem() {
+        // GIVEN
+        val myItemCustom =
+            MyItemCustom(
+                id = CODE,
+            )
+        (mainViewModel.itemsList as MutableStateFlow<List<MyItemCustom>>).value =
+            listOf(
+                myItemCustom,
+            )
+        // WHEN
+        mainViewModel.getItemSelect(CODE)
+        // THEN
+        assert(mainViewModel.item.value == myItemCustom)
+    }
+
+    @Test
+    fun getItemSelectReturnItemEmty() {
+        // GIVEN
+        // WHEN
+        mainViewModel.getItemSelect(CODE)
+        // THEN
+        assert(mainViewModel.item.value == MyItemCustom())
+    }
 
     @After
     fun cleanup() {
