@@ -38,6 +38,14 @@ MainViewModel
         private val _visibleLoading = MutableStateFlow(false)
         val visibleLoading: StateFlow<Boolean> = _visibleLoading
 
+        /**
+         * Obtener El Item seleccionado
+         *
+         * @param id id del Producto
+         *
+         * @return POJO [MyItemCustom]
+         *
+         */
         fun getItemSelect(id: String): MyItemCustom {
             _item.value =
                 _itemsList.value.firstOrNull {
@@ -46,6 +54,14 @@ MainViewModel
             return _item.value
         }
 
+        /**
+         * Buscar Productos
+         *
+         * @param query valor de busqueda de productos
+         *
+         * @return Unit (collect valores del flow)
+         *
+         */
         fun searchProduct(query: String) {
             _visibleLoading.value = true
             viewModelScope.launch {
@@ -70,6 +86,14 @@ MainViewModel
             }
         }
 
+        /**
+         * Obtener detalle del producto
+         *
+         * @param code id del producto
+         *
+         * @return Unit (collect valores del flow)
+         *
+         */
         fun getDetailProduct(code: String) {
             _visibleLoading.value = true
             viewModelScope.launch {
@@ -87,6 +111,12 @@ MainViewModel
             }
         }
 
+        /**
+         * Agregar producto
+         *
+         * @return Unit (collect valores del flow)
+         *
+         */
         fun addProduct() {
             viewModelScope.launch {
                 item.value.let {
@@ -106,6 +136,14 @@ MainViewModel
             }
         }
 
+        /**
+         * Comprobar si se agrego producto
+         *
+         * @param id id del producto
+         *
+         * @return Boolean si se agredo o no el producto [true] [false]
+         *
+         */
         private suspend fun isAddProduct(id: String): Boolean {
             return repositoryProductsDB.getProduct(id) != null
         }
