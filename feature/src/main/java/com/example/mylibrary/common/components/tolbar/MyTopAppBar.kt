@@ -39,6 +39,20 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.mylibrary.R
 import com.example.mylibrary.theme.MyTestTheme
 
+/**
+ * Compose Crossfade en estado expandido o collapsed
+ *
+ * @param modifier modificador del layout
+ *
+ * @param expanded  estado inicial del appbar
+ *
+ * @param onExpandedChanged lambda indicando el cambio de estad
+ *
+ * @param onSearchAction Accion de Busqueda en AppBar
+ *
+ * @return Composable Crossfade AppBar
+ *
+ */
 @Composable
 fun ExpandableSearchView(
     searchDisplay: String,
@@ -77,6 +91,12 @@ fun ExpandableSearchView(
     }
 }
 
+/**
+ * Compose Icono de busqueda
+ *
+ * @return Icono de busqueda
+ *
+ */
 @Composable
 fun SearchIcon() {
     Icon(
@@ -86,6 +106,16 @@ fun SearchIcon() {
     )
 }
 
+/**
+ * Compose AppBar en estado colapsado
+ *
+ * @param modifier modificador del layout
+ *
+ * @param onExpandedChanged  cambio a estado expandido, lambda con parametro Boolean
+ *
+ * @return Composable AppBar collapsed
+ *
+ */
 @Composable
 fun CollapsedSearchView(
     onExpandedChanged: (Boolean) -> Unit,

@@ -14,6 +14,14 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import com.example.mylibrary.R
 
+/**
+ * Compose Boton con icono
+ *
+ * @param addClick fun con argumentos que retorna Unit, se ejecuta en el onClick de Boton flotante
+ *
+ * @return Composable Element
+ *
+ */
 @Composable
 fun ButtonAddWithIcon(addClick: () -> Unit) {
     ExtendedFloatingActionButton(

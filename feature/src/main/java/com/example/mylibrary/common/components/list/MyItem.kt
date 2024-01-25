@@ -43,6 +43,16 @@ import com.example.core.network.Util.Companion.CONT_HTTPS
 import com.example.mylibrary.R
 import com.example.mylibrary.model.MyItemCustom
 
+/**
+ * Compose Box Item
+ *
+ * @param modifier modificador del layout
+ *
+ * @param item  de tipo [MyItemCustom]
+ *
+ * @return Composable Item
+ *
+ */
 @Composable
 fun MyItem(
     modifier: Modifier,
@@ -75,6 +85,14 @@ fun MyItem(
     }
 }
 
+/**
+ * Compose Box titulo del Item
+ *
+ * @param item  de tipo [MyItemCustom]
+
+ * @return Composable Box Item titulo
+ *
+ */
 @Composable
 fun TitleItem(item: MyItemCustom) {
     Box(
@@ -93,6 +111,16 @@ fun TitleItem(item: MyItemCustom) {
     }
 }
 
+/**
+ * Compose Description Item
+ *
+ * @param modifier modificador del layout
+ *
+ * @param item  de tipo [MyItemCustom]
+ *
+ * @return Composable Item descripcion
+ *
+ */
 @Composable
 fun DescriptItem(
     item: MyItemCustom,

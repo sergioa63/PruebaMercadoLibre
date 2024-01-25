@@ -24,6 +24,18 @@ import com.example.mylibrary.R
 import com.example.mylibrary.model.MyItemCustom
 import com.example.mylibrary.theme.secondaryColorLite
 
+/**
+ * Compose Listado de items
+ *
+ * @param modifier modificador del layout
+ *
+ * @param listItems lista de Items [List<MyItemCustom>] valor por default vacio
+ *
+ * @param goToDetail lamda con parametro (String) click sobre el item
+ *
+ * @return Composable list items
+ *
+ */
 @Composable
 fun ListItem(
     modifier: Modifier = Modifier,
@@ -46,6 +58,18 @@ fun ListItem(
     }
 }
 
+/**
+ * Compose Contenedor del item
+ *
+ * @param modifier modificador del layout
+ *
+ * @param item  de tipo [MyItemCustom]
+ *
+ * @param goToDetail lamda con parametro (String) click sobre el item
+ *
+ * @return Composable Item
+ *
+ */
 @Composable
 fun ItemContainer(
     item: MyItemCustom,

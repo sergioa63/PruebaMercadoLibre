@@ -9,6 +9,12 @@ import com.example.core.network.currentConnectivityState
 import com.example.core.network.observeConnectivityAsFlow
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
+/**
+ * Compose Estado de conexion
+ *
+ * @return estado de conexion puede ser [ConnectionState.Available] o [ConnectionState.Unavailable]
+ *
+ */
 @ExperimentalCoroutinesApi
 @Composable
 fun connectivityState(): State<ConnectionState> {

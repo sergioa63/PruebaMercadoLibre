@@ -12,8 +12,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import com.example.mylibrary.R
 
+/**
+ * Compose cuando no hay conexion
+ *
+ * @return Composable Icono en pantalla cuando no hay conexion
+ *
+ */
 @Composable
-fun ConnectionScreen()  {
+fun ConnectionScreen() {
     Column(
         modifier =
             Modifier

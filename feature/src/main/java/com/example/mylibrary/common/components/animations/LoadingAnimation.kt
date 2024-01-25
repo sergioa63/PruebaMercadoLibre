@@ -22,6 +22,20 @@ import androidx.compose.ui.unit.Dp
 import com.example.mylibrary.R
 import kotlinx.coroutines.delay
 
+/**
+ * Compose Loading animado
+ *
+ * @param circleColor color del circulo de progreso valor por default 0xFF42478B
+ *
+ * @param circleSize size del circulo de progreso valor por default 36 dp
+ *
+ *  @param animationDelay delay de animacion valor por default 400
+ *
+ *  @param initialAlpha valor inicial del holder por default 0.3f
+ *
+ * @return Composable Element
+ *
+ */
 @Composable
 fun LoadingAnimation3(
     circleColor: Color = Color(0xFF42478B),

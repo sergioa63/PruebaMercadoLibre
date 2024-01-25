@@ -7,6 +7,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.example.mylibrary.theme.MyTestTheme
 
+/**
+ * Compose Surface del listado del items
+ *
+ * @param content contenido del surface
+ *
+ * @return Composable Surface con Theme
+ *
+ */
 @Composable
 fun MyListApp(content: @Composable () -> Unit) {
     MyTestTheme {
