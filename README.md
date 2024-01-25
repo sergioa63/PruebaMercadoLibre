@@ -14,12 +14,12 @@ La app debería contar con tres pantallas:
 * Construccion de pantallas con compose
 * Puede rotarce la pantalla manteniendo estado
 * Puede cambiar a modo oscuro el app
-* Patron MVVM con catalog version
+* Patron MVVM 
+* Catalog version
 * Inyeccion dependencias Dagger Hilt
 * Corutinas
 * Flow
 * StateFlow
-* VirewModel
 * Navigation Compose
 * room
 * retrofit
