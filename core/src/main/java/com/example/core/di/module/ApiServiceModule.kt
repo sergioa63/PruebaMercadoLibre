@@ -1,6 +1,6 @@
 package com.example.core.di.module
 
-import com.example.core.database.dao.DescriptProduct
+import com.example.core.apiservice.DescriptProduct
 import com.example.core.model.repository.remoto.IRepositoryDetailRemote
 import com.example.core.model.repository.remoto.IRepositoryListRemote
 import com.example.core.model.repository.remoto.RepositoryDescriptionProductImpl
@@ -48,7 +48,10 @@ object ApiServiceModule {
 
     @Singleton
     @Provides
-    fun provideDescriptProduct(retrofit: Retrofit): DescriptProduct = retrofit.create(DescriptProduct::class.java)
+    fun provideDescriptProduct(retrofit: Retrofit): DescriptProduct =
+        retrofit.create(
+            DescriptProduct::class.java,
+        )
 
     @Singleton
     @Provides

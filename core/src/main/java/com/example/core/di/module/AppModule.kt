@@ -9,6 +9,10 @@ import kotlinx.coroutines.Dispatchers
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
+    /**
+     * Hilt provider Dispacher IO
+     *
+     */
     @Provides
     fun getDispachersIo() = Dispatchers.IO
 }

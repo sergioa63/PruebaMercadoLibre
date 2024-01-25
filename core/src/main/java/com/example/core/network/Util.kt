@@ -20,6 +20,12 @@ class Util {
     }
 }
 
+/**
+ * Obtener estado de la conexion a la red
+ *
+ * @return ConnectionState puede ser [ConnectionState.Available] o [ConnectionState.Unavailable]
+ *
+ */
 val Context.currentConnectivityState: ConnectionState
     get() {
         val connectivityManager =
@@ -27,6 +33,14 @@ val Context.currentConnectivityState: ConnectionState
         return getCurrentConnectivityState(connectivityManager)
     }
 
+/**
+ * Obtener estado de la conexion a la red
+ *
+ * @param connectivityManager parametro ConnectivityManager de tipo [Context.CONNECTIVITY_SERVICE]
+ *
+ * @return ConnectionState puede ser [ConnectionState.Available] o [ConnectionState.Unavailable]
+ *
+ */
 private fun getCurrentConnectivityState(connectivityManager: ConnectivityManager): ConnectionState {
     val connected =
         connectivityManager.allNetworks.any { network ->
@@ -38,6 +52,12 @@ private fun getCurrentConnectivityState(connectivityManager: ConnectivityManager
     return if (connected) ConnectionState.Available else ConnectionState.Unavailable
 }
 
+/**
+ * Observador de estado de conexion
+ *
+ * @return flow con estado de la conexion
+ *
+ */
 @ExperimentalCoroutinesApi
 fun Context.observeConnectivityAsFlow() =
     callbackFlow {
@@ -60,6 +80,12 @@ fun Context.observeConnectivityAsFlow() =
         }
     }
 
+/**
+ * Callback de estado de conexion
+ *
+ * @return En callBack puede ser [ConnectionState.Available] o [ConnectionState.Unavailable]
+ *
+ */
 fun NetworkCallback(callback: (ConnectionState) -> Unit): ConnectivityManager.NetworkCallback {
     return object : ConnectivityManager.NetworkCallback() {
         override fun onAvailable(network: Network) {
@@ -72,11 +98,23 @@ fun NetworkCallback(callback: (ConnectionState) -> Unit): ConnectivityManager.Ne
     }
 }
 
+/**
+ * Fun ext. Formateo  de dato tipo Double en #,###
+ *
+ * @return String de tipo Doble en formato #,###
+ *
+ */
 fun Double.formatThousand(): String {
     val decimalFormatter = DecimalFormat(Util.PATTERN)
     return decimalFormatter.format(this)
 }
 
+/**
+ * Fun ext. Formateo de dato tipo String
+ *
+ * @return String reemplazando (,) con (.)
+ *
+ */
 fun String.clearThousandFormat(): String {
     return this.replace(Util.OLD_VALUE, Util.NEW_VALUE)
 }

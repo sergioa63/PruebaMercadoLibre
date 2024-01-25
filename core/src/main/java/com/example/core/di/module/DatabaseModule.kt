@@ -20,11 +20,25 @@ class DatabaseModule {
         private const val NAME_DATA_DASE = "database_test"
     }
 
+    /**
+     * Hilt provider Productos Dao
+     *
+     * @param appDatabase set Database
+     *
+     * @return Producto Dao
+     */
     @Provides
     fun provideProductosDao(appDatabase: AppDatabase): ProductosDao {
         return appDatabase.productosDao()
     }
 
+    /**
+     * Hilt provider DataBase Singleton
+     *
+     * @param appContext Context de aplicacion
+     *
+     * @return AppDatabase
+     */
     @Provides
     @Singleton
     fun provideAppDatabase(
@@ -37,6 +51,13 @@ class DatabaseModule {
         ).build()
     }
 
+    /**
+     * Hilt provider IRepositoryProducts
+     *
+     * @param productosDao Dao Productos
+     *
+     * @return Implementacion RepositoryProducts
+     */
     @Singleton
     @Provides
     fun providesRepositoryProducts(productosDao: ProductosDao): IReposirotyDetailLocal = RepositoryProducts(productosDao)
